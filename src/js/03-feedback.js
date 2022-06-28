@@ -42,6 +42,8 @@ form.addEventListener("click", (event) => {
         console.log(messageData)
         email.value = null
         message.value = null
+        messageData.email = null
+        messageData.message = null
         localStorage.removeItem("feedback-form-state")
     }
 })
