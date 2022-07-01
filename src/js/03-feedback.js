@@ -17,6 +17,7 @@ const loadLustFormData = () => {
         email.value = dataObject.email
         message.value = dataObject.message
     }
+    
 }
 
 const saveData = throttle(() => {
@@ -42,8 +43,8 @@ form.addEventListener("click", (event) => {
         console.log(messageData)
         email.value = null
         message.value = null
-        messageData.email = null
-        messageData.message = null
+        messageData.email = ""
+        messageData.message = ""
         localStorage.removeItem("feedback-form-state")
     }
 })
